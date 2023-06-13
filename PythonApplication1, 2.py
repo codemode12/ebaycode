@@ -45,10 +45,10 @@ while countNum < 5:
                 if len(soldPrices[j].text.replace('$', '').replace(',', '')) < 7:
                     #removes unwanted characters in price and turns prices into integers since were Tags before
                     priceList.append((soldPrices[j].text).replace('$', '').replace(',', ''))
-                    priceList = [int(float(i)) for i in priceList]
+            priceList = [int(float(i)) for i in priceList]
                     #reformats original price we need to compare average to, and changes to float
-                    almostOrigPrice = prices[i].text.replace('$', '').replace(',', '')
-                    origPrice = (float(almostOrigPrice))
+            almostOrigPrice = prices[i].text.replace('$', '').replace(',', '')
+            origPrice = (float(almostOrigPrice))
             #checks if there are no search results
             if soldPriceLen == 0:
                 print('No Sold Prices')
